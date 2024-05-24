@@ -1,7 +1,11 @@
 #ifndef _INFOWIN_H_
 #define _INFOWIN_H_
 
+#include <fstream>
+#include <iostream>
 #include <ncurses.h>
+#include <string>
+#include <vector>
 
 class InfoWin {
 private:
@@ -32,6 +36,16 @@ public:
     wrefresh(infowin);
     refresh();
   }
+
+  void printInfo(int yy, int xx, const char *content) {
+    wrefresh(infowin);
+    mvwprintw(infowin, yy, xx, "%s", content);
+    wrefresh(infowin);
+  }
+
+  void refreshw() { wrefresh(infowin); }
+
+  void clearw() { wclear(infowin); }
 };
 
 #endif // !_INFOWIN_H_

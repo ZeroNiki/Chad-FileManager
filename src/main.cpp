@@ -1,5 +1,6 @@
 #include "../include/infowin.h"
 #include "../include/read.h"
+#include "../include/readinfo.h"
 #include "../include/win.h"
 
 #include <boost/filesystem.hpp>
@@ -17,14 +18,14 @@ int main(int argc, char **argv) {
     initscr();
     cbreak();
     noecho();
+    curs_set(FALSE);
     keypad(stdscr, true);
 
     InfoWin info;
-    info.createWin();
-    info.setBox();
-
     NcursesWindow filewin;
+
     FileRead read(filewin);
+    ReadInfo readInfo(info);
 
     wstring startPath = L".";
     if (argc > 1) {

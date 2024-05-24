@@ -1,0 +1,11 @@
+Hi, User!
+'q' - exit
+'c' - show hidden
+move:
+  'j' - down 
+  'k' - up
+  'l' - open
+  'h' - go back
+
+
+
