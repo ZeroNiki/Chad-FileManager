@@ -5,6 +5,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <ncurses.h>
 #include <string>
 #include <vector>
 
@@ -46,6 +47,8 @@ public:
 
     refreshI();
   }
+
+  void ref() { info.clearw(); }
 };
 
 #endif // !_READINFO_H_

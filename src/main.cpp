@@ -25,6 +25,7 @@ int main(int argc, char **argv) {
     NcursesWindow filewin;
 
     FileRead read(filewin);
+
     ReadInfo readInfo(info);
 
     wstring startPath = L".";

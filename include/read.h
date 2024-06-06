@@ -14,6 +14,8 @@
 #include <string>
 #include <vector>
 
+#include "readinfo.h"
+
 class FileRead {
 private:
   NcursesWindow &window;
@@ -120,8 +122,8 @@ public:
         openDir(currentPath);
         break;
 
-        // case 't': // Usage
-        //   break;
+      case 't': // Usage
+        break;
 
       default:
         break;
